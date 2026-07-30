@@ -5,9 +5,9 @@ import { Image } from "@/components/ui/image";
 // --- UPDATED CONFIGURATION ---
 
 // We are now referencing the local image inside your /public folder
-const LOGO_URL = "/iot-image.jpg"; 
+const LOGO_URL = "https://media.base44.com/images/public/6a68107f358084bdb749725c/eebb6edfd_IMG-20260725-WA0003.jpg"; 
 
-const LOGO_TITLE = "IoT Lab";
+const LOGO_TITLE = "IoT Hub";
 const INSTITUTION = "Kuppam Engineering College";
 
 const footerNav = [
@@ -64,7 +64,7 @@ export default function Footer() {
             
             {/* Updated Credits */}
             <p className="mt-4 text-sm text-gray-500">
-              Designed & Developed by <span className="text-white font-medium">Team ECE</span><br />
+              Designed & Developed by <span className="text-white font-medium">Team Lafluence</span><br />
               Under <span className="text-purple-400">Dr.G.N.Kodanda Ramaiah</span>
             </p>
             
@@ -96,7 +96,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10 pt-6">
           {/* Updated Copyright */}
-          <p className="text-xs text-gray-600">© {new Date().getFullYear()} Kuppam Engineering College IoT Lab. All rights reserved.</p>
+          <p className="text-xs text-gray-600">© {new Date().getFullYear()} Kuppam Engineering College IoT Hub. All rights reserved.</p>
           <p className="text-xs text-gray-600">Sense · Connect · Think · Act</p>
         </div>
       </div>
