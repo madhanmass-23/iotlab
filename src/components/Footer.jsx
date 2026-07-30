@@ -65,8 +65,16 @@ export default function Footer() {
             {/* Updated Credits */}
             <p className="mt-4 text-sm text-gray-500">
               Designed & Developed by <span className="text-white font-medium">Team Lafluence</span><br />
-              Under <span className="text-purple-400">Dr.G.N.Kodanda Ramaiah</span>
-            </p>
+             Under{" "}
+  <a 
+    href="https://kec.ac.in/departments/electronics-communication-engineering/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-purple-400 hover:text-purple-300 hover:underline transition-colors"
+  >
+    Dr.G.N.Kodanda Ramaiah
+  </a>
+</p>
             
             {/* Social Links - Keep these for professional presence */}
             <div className="mt-6 flex gap-3">
