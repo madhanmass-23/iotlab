@@ -37,7 +37,7 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-4 py-1.5 text-xs font-medium text-purple-700 mb-8">
                 <span className="h-1.5 w-1.5 rounded-full bg-purple-500 animate-pulse" />
-                SYNAPTIC · IoT Knowledge Engine
+                Learn · IoT Knowledge Engine
               </div>
 
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-gray-900">
@@ -201,7 +201,7 @@ export default function Home() {
             Team Lafluence
           </h2>
           <p className="mt-3 text-purple-200">
-            Under the guidance of <span className="text-white font-semibold">Dr. G.N. Kondaramya</span>
+            Under the guidance of <span className="text-white font-semibold">Dr. G.N. Kodanda Ramaiah</span>
           </p>
           <p className="mt-2 text-purple-300 text-sm">Collaborate · Execute · Elevate</p>
         </div>
