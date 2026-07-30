@@ -1,0 +1,48 @@
+// IoT Projects directory. Mini + Major projects with difficulty badges.
+// Add or replace with your own project list — these are realistic examples.
+
+export const miniProjects = [
+  { title: "Smart Doorbell with Camera", difficulty: "Easy", components: ["ESP32-CAM", "Buzzer"], industry: "Smart Home", description: "Snap a photo and ring a chime when someone presses the button, with a phone notification." },
+  { title: "Automated Plant Watering", difficulty: "Easy", components: ["Soil Moisture", "Relay", "Pump"], industry: "Agriculture", description: "Water a plant automatically when soil moisture drops below a threshold." },
+  { title: "Room Temperature Monitor", difficulty: "Easy", components: ["DHT11", "OLED"], industry: "Smart Home", description: "Display live temperature and humidity on a small OLED screen." },
+  { title: "PIR Security Alarm", difficulty: "Easy", components: ["PIR", "Buzzer"], industry: "Security", description: "Sound an alarm and flash an LED when motion is detected." },
+  { title: "Smart Dustbin", difficulty: "Easy", components: ["Ultrasonic", "Servo"], industry: "Smart City", description: "Lid opens automatically when a hand approaches, then closes after use." },
+  { title: "Light-Activated Night Lamp", difficulty: "Easy", components: ["LDR", "Relay"], industry: "Smart Home", description: "Turn a lamp on at dusk and off at dawn automatically." },
+  { title: "Door Status Notifier", difficulty: "Easy", components: ["Reed Switch", "ESP8266"], industry: "Security", description: "Get a phone alert whenever a door or window is opened." },
+  { title: "Gas Leak Detector", difficulty: "Medium", components: ["MQ-135", "Buzzer"], industry: "Safety", description: "Detect harmful gases and trigger a local alarm with an LED indicator." },
+  { title: "Contactless Temperature Kiosk", difficulty: "Medium", components: ["MLX90614", "Servo"], industry: "Healthcare", description: "Measure forehead temperature contactlessly and dispense sanitiser via servo." },
+  { title: "Smart Parking Assistant", difficulty: "Medium", components: ["Ultrasonic", "LED"], industry: "Smart City", description: "Detect if a parking slot is occupied and light a green/red indicator." },
+  { title: "Mailbox Arrival Notifier", difficulty: "Easy", components: ["PIR", "ESP8266"], industry: "Smart Home", description: "Detect when mail drops in and send a push notification." },
+  { title: "Anti-Theft Backpack Alarm", difficulty: "Medium", components: ["MPU6050", "Buzzer"], industry: "Wearables", description: "Sound an alarm if the bag is moved while armed via a phone toggle." },
+  { title: "Soil pH & Moisture Logger", difficulty: "Medium", components: ["Soil Moisture", "pH Probe"], industry: "Agriculture", description: "Log soil conditions to the cloud for crop analysis." },
+  { title: "Staircase Auto Lighting", difficulty: "Easy", components: ["PIR", "Relay"], industry: "Smart Home", description: "Light up stairs only when someone is present to save energy." },
+  { title: "Water Level Indicator", difficulty: "Easy", components: ["Ultrasonic", "Buzzer"], industry: "Smart Home", description: "Monitor tank level and beep when it's nearly full." },
+  { title: "Smart Mirror with Weather", difficulty: "Medium", components: ["ESP32", "Display"], industry: "Smart Home", description: "A mirror that overlays live weather and clock readouts." },
+  { title: "RFID Attendance System", difficulty: "Medium", components: ["RFID-RC522", "ESP8266"], industry: "Education", description: "Log student attendance by tapping an RFID card to a reader." },
+  { title: "Pet Feeder Scheduler", difficulty: "Medium", components: ["Servo", "RTC"], industry: "Wearables", description: "Dispense pet food at set times each day using a servo-driven flap." },
+  { title: "Door Lock with Keypad", difficulty: "Medium", components: ["Keypad", "Servo"], industry: "Security", description: "Unlock a door by entering the correct PIN code on a keypad." },
+  { title: "Air Quality Dashboard", difficulty: "Medium", components: ["MQ-135", "ESP8266"], industry: "Environment", description: "Stream indoor air-quality data to a live web dashboard." },
+  { title: "Rain Detector Alert", difficulty: "Easy", components: ["Rain Sensor", "Buzzer"], industry: "Smart Home", description: "Be alerted to close windows the moment rain starts." },
+  { title: "Heart Rate Monitor", difficulty: "Medium", components: ["Pulse Sensor", "OLED"], industry: "Healthcare", description: "Display live heart-rate readings on an OLED display." },
+  { title: "Sunlight Tracker for Plants", difficulty: "Medium", components: ["LDR", "Servo"], industry: "Agriculture", description: "Rotate a panel to follow the brightest light source." },
+  { title: "Smart Fan Controller", difficulty: "Easy", components: ["DHT11", "Relay"], industry: "Smart Home", description: "Turn a fan on automatically above a set room temperature." },
+];
+
+export const majorProjects = [
+  { title: "Smart Agriculture System", difficulty: "Major", components: ["ESP32", "Soil Moisture", "Relay", "DHT11"], industry: "Agriculture", description: "End-to-end farm monitoring with automated irrigation, weather sensing, and a cloud dashboard for crop analytics." },
+  { title: "Home Automation Hub", difficulty: "Major", components: ["ESP32", "Relay", "PIR", "Blynk"], industry: "Smart Home", description: "Centralised control of lighting, fans, and locks with voice and app integration across multiple rooms." },
+  { title: "IoT-Based Patient Monitoring", difficulty: "Major", components: ["ESP32", "Pulse Sensor", "MLX90614"], industry: "Healthcare", description: "Continuous remote monitoring of vitals (heart rate, SpO₂, temperature) with doctor alerts on anomaly." },
+  { title: "Smart Parking System", difficulty: "Major", components: ["ESP32", "Ultrasonic", "Server"], industry: "Smart City", description: "City-scale parking guidance with live slot availability shown on a mobile app and entry barriers." },
+  { title: "Industrial Predictive Maintenance", difficulty: "Major", components: ["MPU6050", "ESP32", "Cloud ML"], industry: "Industry", description: "Vibration analytics on motors to predict failures before they cause downtime." },
+  { title: "Smart Traffic Management", difficulty: "Major", components: ["ESP32", "IR Sensors", "Server"], industry: "Smart City", description: "Adaptive traffic signals that respond to real-time vehicle density at intersections." },
+  { title: "Automated Greenhouse", difficulty: "Major", components: ["ESP32", "DHT11", "Soil Moisture", "Relay"], industry: "Agriculture", description: "Closed-loop control of temperature, humidity, light, and irrigation in a greenhouse environment." },
+  { title: "Water Quality Monitoring Buoy", difficulty: "Major", components: ["ESP32", "pH Probe", "Turbidity"], industry: "Environment", description: "Floating sensor station measuring pH, turbidity, and dissolved oxygen in water bodies." },
+  { title: "Smart Energy Meter", difficulty: "Major", components: ["ESP8266", "Current Sensor", "Cloud"], industry: "Energy", description: "Real-time electricity consumption tracking with billing estimates and anomaly alerts." },
+  { title: "Warehouse Inventory Robot", difficulty: "Major", components: ["Raspberry Pi", "RFID", "Motors"], industry: "Industry", description: "Autonomous robot that scans RFID-tagged stock and reports inventory levels." },
+  { title: "Smart Street Lighting", difficulty: "Major", components: ["ESP8266", "LDR", "PIR", "Server"], industry: "Smart City", description: "City streetlights that dim when streets are empty and brighten on motion, saving energy." },
+  { title: "Flood Early Warning System", difficulty: "Major", components: ["ESP32", "Ultrasonic", "LoRaWAN"], industry: "Environment", description: "River-level monitoring network with SMS alerts to authorities at flood thresholds." },
+  { title: "Smart Hospital Ward", difficulty: "Major", components: ["ESP32", "Pulse Sensor", "RFID"], industry: "Healthcare", description: "Connected ward tracking patient vitals, nurse calls, and bed occupancy on a central dashboard." },
+  { title: "Autonomous Delivery Robot", difficulty: "Major", components: ["Raspberry Pi", "Ultrasonic", "GPS"], industry: "Logistics", description: "A robot that navigates a campus to deliver items with obstacle avoidance and live tracking." },
+  { title: "Air Pollution Monitoring Network", difficulty: "Major", components: ["ESP32", "MQ-135", "LoRaWAN"], industry: "Environment", description: "Distributed city-wide air-quality sensors feeding a live pollution heat-map." },
+  { title: "Smart Cold Chain Logistics", difficulty: "Major", components: ["ESP32", "DHT11", "GPS", "Cloud"], industry: "Logistics", description: "Temperature-tracked transport for vaccines and food with real-time deviation alerts." },
+];
