@@ -5,7 +5,7 @@ import { Image } from "@/components/ui/image";
 // --- UPDATED CONFIGURATION ---
 
 // We are now referencing the local image inside your /public folder
-const LOGO_URL = "/iot-image.png"; 
+const LOGO_URL = "/iot-image.jpg"; 
 
 const LOGO_TITLE = "IoT Lab";
 const INSTITUTION = "Kuppam Engineering College";
