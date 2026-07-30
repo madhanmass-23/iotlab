@@ -24,11 +24,28 @@ Key Characteristics of IoT:
 • Enormous Scale — By 2030, over 75 billion IoT devices will be active globally.
 • Sensing — Physical phenomena (heat, motion, light, pressure) are converted to digital signals.
 • Heterogeneity — Devices from different manufacturers and using different protocols must interoperate.
+• Cyber-Physical Integration — IoT bridges the gap between the physical and digital worlds by creating digital representations of physical objects (Digital Twins).
+• Actuation — Beyond just sensing, many IoT systems can act on data (like turning off a valve or moving a robot arm) to close the control loop.
+• Scalability — The infrastructure must be able to handle sudden additions of new devices and massive spikes in data traffic without collapsing.
+• Resource Constraints — Many IoT devices possess limited processing power, memory, and battery life, necessitating highly optimized software and network protocols.
+• Unique Identity — Every individual device must have a unique ID (like an IP address or serial number) so it can be specifically addressed, managed, and secured.
 
 Real-World Example: A smart agricultural system places soil sensors across a 100-acre farm. Each sensor measures moisture, temperature, and pH every 15 minutes, uploads to a cloud dashboard, and automatically triggers irrigation when soil moisture drops below a threshold — all with zero human involvement.`,
-        videos: ["https://www.youtube.com/watch?v=02u0tTnMECs&list=PLgwJf8NK-2e6FvFUItZbGYnKiqjrlLpCb&index=8"],
-         
-      },
+       videos: [
+    {
+      id: "res-1",
+      title: "Basics of Physical Design",
+      // Keep your existing YouTube embed link here
+      url: "https://www.youtube.com/embed/5F-0wzO5_C0", 
+    },
+    {
+      id: "res-2",
+      title: "Physical vs. Logical Design",
+      // I found a related video from the same channel to use as an example
+      url: "https://www.youtube.com/embed/A8-K5-gX4Zk", 
+    }
+  ],
+}
       {
         id: "physical-design",
         title: "Physical Design of IoT",

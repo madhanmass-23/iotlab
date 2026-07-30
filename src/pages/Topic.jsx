@@ -4,27 +4,40 @@ import { ArrowLeft, ArrowRight, Play } from "lucide-react";
 import { getTopic } from "@/data/units";
 import { Image } from "@/components/ui/image";
 
-function YouTubeEmbed({ url, label }) {
-  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/);
+function YouTubeEmbed({ video, label }) {
+  // Check if video is just a string URL or an object with { url, title }
+  const url = typeof video === 'string' ? video : video.url;
+  const displayLabel = typeof video === 'string' ? label : (video.title || label);
+
+  // Smarter regex to catch standard links, shortened links, and embed links
+  const match = url?.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/);
   const id = match ? match[1] : null;
+
   return (
-    <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-      <div className="aspect-video bg-gray-900">
+    <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col h-full">
+      <div className="aspect-video bg-gray-900 w-full relative">
         {id ? (
           <iframe
-            className="h-full w-full"
+            className="absolute top-0 left-0 w-full h-full"
             src={`https://www.youtube.com/embed/${id}`}
-            title={label}
+            title={displayLabel}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : url ? (
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src={url}
+            title={displayLabel}
             allowFullScreen
           />
         ) : (
           <div className="flex h-full items-center justify-center font-mono text-xs text-gray-500">[YouTube Placeholder]</div>
         )}
       </div>
-      <div className="flex items-center gap-2 px-4 py-3 bg-white border-t border-gray-100">
-        <Play className="h-3.5 w-3.5 text-purple-500" />
-        <span className="text-sm text-gray-500">{label}</span>
+      <div className="flex items-center gap-2 px-4 py-3 bg-white border-t border-gray-100 flex-grow">
+        <Play className="h-3.5 w-3.5 text-purple-500 flex-shrink-0" />
+        <span className="text-sm text-gray-600 font-medium line-clamp-2">{displayLabel}</span>
       </div>
     </div>
   );
@@ -36,7 +49,7 @@ export default function Topic() {
   if (!result) return <Navigate to="/units" replace />;
   const { unit, topic } = result;
 
-  const paragraphs = topic.content.split("\n").filter(Boolean);
+  const paragraphs = topic.content?.split("\n").filter(Boolean) || [];
 
   return (
     <div className="min-h-screen bg-white">
@@ -112,9 +125,9 @@ export default function Topic() {
               <section className="mt-16">
                 <p className="font-mono text-xs uppercase tracking-[0.3em] text-purple-500 mb-3">Video Resources</p>
                 <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">Watch & Learn</h2>
-                <div className="grid gap-5 md:grid-cols-2">
+                <div className="grid gap-6 md:grid-cols-2 items-stretch">
                   {topic.videos.map((v, i) => (
-                    <YouTubeEmbed key={i} url={v} label={`${topic.title} — Resource ${i + 1}`} />
+                    <YouTubeEmbed key={i} video={v} label={`${topic.title} — Resource ${i + 1}`} />
                   ))}
                 </div>
               </section>
