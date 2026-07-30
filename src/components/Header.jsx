@@ -13,7 +13,7 @@ import { Image } from "@/components/ui/image";
 const LOGO_URL = "/iot-image.jpg"; 
 
 // Update these labels to customize your main title and subtitle
-const LOGO_TITLE = "IoT Lab"; 
+const LOGO_TITLE = "IoT Hub"; 
 const LOGO_SUBTITLE = "Kuppam Engineering College"; // or e.g. "LEARN·IoT.SMART"
 
 // --- END UPDATED CONFIGURATION ---
