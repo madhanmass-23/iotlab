@@ -44,7 +44,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-display text-sm font-bold tracking-wide text-white">LAFLUENCE</p>
-                <p className="font-mono text-[10px] tracking-[0.2em] text-purple-400">SYNAPTIC · IoT</p>
+                <p className="font-mono text-[10px] tracking-[0.2em] text-purple-400"> Learn · IoT</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-gray-400 max-w-sm">
@@ -52,7 +52,7 @@ export default function Footer() {
             </p>
             <p className="mt-4 text-sm text-gray-500">
               Designed by <span className="text-white font-medium">Team Lafluence</span><br />
-              Under <span className="text-purple-400">Dr. G.N. Kondaramya</span>
+              Under <span className="text-purple-400">Dr.G.N.Kodanda Ramaiah</span>
             </p>
             <div className="mt-6 flex gap-3">
               {[Github, Linkedin, Mail].map((Icon, i) => (
@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10 pt-6">
-          <p className="text-xs text-gray-600">© {new Date().getFullYear()} SYNAPTIC IoT Knowledge Engine. All rights reserved.</p>
+          <p className="text-xs text-gray-600">© {new Date().getFullYear()} IoT Lab Knowledge Engine. All rights reserved.</p>
           <p className="text-xs text-gray-600">Collaborate · Execute · Elevate</p>
         </div>
       </div>
