@@ -51,7 +51,7 @@ export const actuators = [
     slug: "dc-motor",
     name: "DC Motor",
     category: "Rotary Motion",
-    image: "",
+    image: "/moter.jpg",
     short: "A motor that spins continuously — the workhorse for wheels, fans, and pumps.",
     overview:
       "A DC motor converts electrical energy into continuous rotational motion. Apply voltage and it spins; reverse the polarity and it spins the other way. It's the simplest and most common motor, powering fans, wheels, drills, and pumps. Because a microcontroller can't drive a motor directly, a driver circuit (like the L298N or an H-bridge) handles the current and direction control.",
@@ -116,11 +116,12 @@ export const actuators = [
     ],
     videos: ["https://www.youtube.com/watch?v=8j4Dn0vVqOc"],
   },
+  
   {
     slug: "buzzer",
     name: "Piezo Buzzer",
     category: "Audio / Alerting",
-    image: "",
+    image: "Buzzer.jpg",
     short: "A small sounder for alerts, alarms, and audible feedback.",
     overview:
       "A piezo buzzer is a simple, low-cost sounder that produces a tone when voltage is applied. Active buzzers have a built-in oscillator and just need power to beep; passive buzzers need a PWM signal and can play different tones. They're the audible alert layer of almost every IoT system — alarms, keypads, parking sensors, and notifications.",

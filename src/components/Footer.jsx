@@ -7,7 +7,7 @@ import { Image } from "@/components/ui/image";
 // We are now referencing the local image inside your /public folder
 const LOGO_URL = "https://media.base44.com/images/public/6a68107f358084bdb749725c/eebb6edfd_IMG-20260725-WA0003.jpg"; 
 
-const LOGO_TITLE = "IoT Hub";
+const LOGO_TITLE = "Lafluence";
 const INSTITUTION = "Kuppam Engineering College";
 
 const footerNav = [

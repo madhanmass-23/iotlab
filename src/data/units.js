@@ -32,20 +32,10 @@ Key Characteristics of IoT:
 
 Real-World Example: A smart agricultural system places soil sensors across a 100-acre farm. Each sensor measures moisture, temperature, and pH every 15 minutes, uploads to a cloud dashboard, and automatically triggers irrigation when soil moisture drops below a threshold — all with zero human involvement.`,
        videos: [
-    {
-      id: "res-1",
-      title: "Basics of Physical Design",
-      // Keep your existing YouTube embed link here
-      url: "https://www.youtube.com/embed/5F-0wzO5_C0", 
-    },
-    {
-      id: "res-2",
-      title: "Physical vs. Logical Design",
-      // I found a related video from the same channel to use as an example
-      url: "https://www.youtube.com/embed/A8-K5-gX4Zk", 
-    }
-  ],
-}
+          "https://www.youtube.com/watch?v=om-5QTbLCCs&t=3s&pp=ygUjRGVmaW5pdGlvbiAmIENoYXJhY3RlcmlzdGljcyBvZiBJb1Q%3D", // Your first video
+          "https://www.youtube.com/watch?v=FEIQQPD8B9c&pp=ygUjRGVmaW5pdGlvbiAmIENoYXJhY3RlcmlzdGljcyBvZiBJb1TSBwkJxQsBhyohjO8%3D", // Paste your second video link here
+        ]
+      },
       {
         id: "physical-design",
         title: "Physical Design of IoT",
@@ -68,7 +58,7 @@ A standard IoT device is physically composed of:
 6. PCB & Enclosure — The board that connects all components, housed in a weatherproof casing for outdoor use.
 
 Real-World Example: A smart streetlight node physically contains a light-dependent resistor (LDR sensor), an STM32 microcontroller, a cellular modem, and a rechargeable LiFePO4 battery housed in an IP67-rated outdoor enclosure mounted on the lamp post.`,
-        videos: ["https://www.youtube.com/watch?v=xG6WGad80wA&list=PLgwJf8NK-2e6FvFUItZbGYnKiqjrlLpCb&index=13"],
+        videos: ["https://www.youtube.com/watch?v=xG6WGad80wA&list=PLgwJf8NK-2e6FvFUItZbGYnKiqjrlLpCb&index=13","https://www.youtube.com/watch?v=8d7PA2glXMA&pp=ygUWUGh5c2ljYWwgRGVzaWduIG9mIElvVA%3D%3D"],
       },
       {
         id: "iot-protocols",
@@ -89,7 +79,7 @@ Application-Layer Protocols:
 • WebSocket — Persistent two-way channel. Good for real-time dashboards.
 
 Real-World Example: A weather station in Antarctica uses MQTT over satellite because MQTT retains the last known reading ('Last Will' feature) even when the link drops for hours, ensuring the monitoring team always sees the most recent valid data.`,
-        videos: ["https://www.youtube.com/watch?v=xG6WGad80wA&list=PLgwJf8NK-2e6FvFUItZbGYnKiqjrlLpCb&index=13"],
+        videos: ["https://www.youtube.com/watch?v=OTjWSUw8h0o&list=PLgwJf8NK-2e4XaaQp7_s5TmkRwK4rBvDC","https://www.youtube.com/watch?v=tTJxNnfEI7Y&pp=ygUOaW90IHByb3RvY29scyA%3D"],
       },
       {
         id: "communication-models",
@@ -286,7 +276,7 @@ Key Board Anatomy (ESP32):
 • Built-in LED — typically GPIO 2.
 
 Real-World Example: Setting up an ESP32 to read a DHT22 sensor and blink the built-in LED whenever temperature exceeds 30°C, verifying sensor + MCU + IDE setup all work before building the full IoT node.`,
-        videos: ["https://www.youtube.com/watch?v=Li0Qqk3vF3A"],
+        videos: ["https://www.youtube.com/watch?v=AitCKcyjHuQ&t=194s"],
       },
       {
         id: "programming-iot",
@@ -320,7 +310,7 @@ Python syntax on embedded hardware. Easier to learn, slightly less efficient.
 import dht; sensor = dht.DHT11(Pin(4)); sensor.measure(); print(sensor.temperature())
 
 Real-World Example: A flood sensor attached to a bridge pillar sleeps 95% of the time, wakes every 60 seconds to measure water level via ultrasonic sensor, and sends an SMS alert via GSM module only when water rises above 80% of bank level.`,
-        videos: ["https://www.youtube.com/watch?v=En2R2KCr1Hk"],
+        videos: ["https://www.youtube.com/watch?v=PSo3m7euzo0&list=PL_zvrXFdKgZpCgI1ZgfbJUcuGTKLL8pMT"],
       },
       {
         id: "reading-sensors",
@@ -355,7 +345,7 @@ Calibration:
 Sensors have offsets. For a temperature sensor, compare against a known reference thermometer and apply an offset constant: corrected_temp = raw_temp + 1.5.
 
 Real-World Example: A weather station takes 10 ADC readings from a wind speed sensor every second, applies a moving average filter, converts the averaged ADC count to m/s via calibration curve, and publishes the result to MQTT every 5 minutes.`,
-        videos: ["https://www.youtube.com/watch?v=Tt5L_d1O_qA"],
+        videos: ["https://www.youtube.com/watch?v=liC7UuWpGdw"],
       },
       {
         id: "bluetooth-comm",
@@ -382,7 +372,7 @@ Range & Power Comparison:
 • BLE: ~100m, very low power (periodic advertising + sleep)
 
 Real-World Example: A wearable fitness band uses BLE to communicate with a smartphone. The band (peripheral) measures heart rate every second and notifies the phone app (central) only when the value changes — saving battery while keeping the phone display always current.`,
-        videos: ["https://www.youtube.com/watch?v=P6TwNTqJzSc"],
+        videos: ["https://www.youtube.com/watch?v=O5XcZXT8kXU"],
       },
       {
         id: "wifi-comm",
@@ -417,7 +407,7 @@ Wi-Fi Considerations for IoT:
 • mDNS (esp_mdns) lets devices be found by name (sensor.local) without knowing IP.
 
 Real-World Example: An ESP32 in a home energy monitor connects to the home Wi-Fi, reads current clamps via ADC every 10 seconds, publishes power consumption to an MQTT broker on a Raspberry Pi, which logs to InfluxDB and displays live watts on a Grafana dashboard visible on any browser in the house.`,
-        videos: ["https://www.youtube.com/watch?v=w0w6XqQ2tFE"],
+        videos: ["https://www.youtube.com/watch?v=-fjPII3dkkc"],
       },
     ],
   },
@@ -461,7 +451,7 @@ Key Concepts from IoT-ARM:
 • Resource — A physical or computational source of data on the device.
 
 Real-World Example: When Google Home controls a Philips Hue bulb, the ARM layers are all at work: physical bulb (device layer) ↔ Zigbee mesh ↔ Hue Bridge gateway (network layer) ↔ Philips cloud service (service layer) ↔ Google Home app (application layer).`,
-        videos: ["https://www.youtube.com/watch?v=xzYpXqTq7xk"],
+        videos: ["https://www.youtube.com/watch?v=g2IahlUYZdU&pp=ygUiQXJjaGl0ZWN0dXJlIFJlZmVyZW5jZSBNb2RlbCAoQVJNKQ%3D%3D"],
       },
       {
         id: "6lowpan",
@@ -488,7 +478,7 @@ Where 6LoWPAN is Used:
 Smart metering, industrial sensors, smart building automation.
 
 Real-World Example: A smart electricity meter in a neighbourhood uses 6LoWPAN over 802.15.4 radio. Each meter has its own IPv6 address. The utility company's server pings each meter's IPv6 address directly to collect usage readings, using the same protocols as the rest of the internet.`,
-        videos: ["https://www.youtube.com/watch?v=P6TwNTqJzSc"],
+        videos: ["https://www.youtube.com/watch?v=wT-n8WDgExk&pp=ygUQNkxvV1BBTiBQcm90b2NvbNIHCQmjCwGHKiGM7w%3D%3D"],
       },
       {
         id: "rpl",
@@ -514,7 +504,7 @@ Objective Functions:
 • MRHOF — Minimises path ETX (Expected Transmission Count) — prefers reliable links even if longer.
 
 Real-World Example: A smart irrigation network has 30 soil sensors scattered across a field. They form a 6LoWPAN/RPL mesh — sensors near the barn edge relay data from farther sensors hop-by-hop to the gateway at the barn, which connects to 4G internet. When one sensor's battery dies, RPL automatically routes around it.`,
-        videos: ["https://www.youtube.com/watch?v=mYP7VYBlqU4"],
+        videos: ["https://www.youtube.com/watch?v=OTjWSUw8h0o&list=PLgwJf8NK-2e6AVNI0dpIFsrNjsGGf-qLu"],
       },
       {
         id: "coap-detail",
@@ -547,7 +537,7 @@ CoAP vs MQTT Comparison:
 • MQTT: Pub/Sub, suited for continuous telemetry streams, requires a broker.
 
 Real-World Example: A network of CoAP-enabled smart electricity plugs. The energy management server does GET coap://plug_living_room/power every 15 minutes to read current wattage. It does PUT coap://plug_living_room/state with body "off" to switch off the plug remotely. No broker needed.`,
-        videos: ["https://www.youtube.com/watch?v=EIqdP5qY7gk"],
+        videos: ["https://www.youtube.com/watch?v=zpKJuJs_zfg&pp=ygUpQ29BUCDigJQgQ29uc3RyYWluZWQgQXBwbGljYXRpb24gUHJvdG9jb2zSBwkJowsBhyohjO8%3D"],
       },
       {
         id: "mqtt-detail",
@@ -574,7 +564,7 @@ Last Will & Testament (LWT):
 Device registers a LWT message when connecting. If it disconnects ungracefully (power cut, crash), the broker automatically publishes the LWT to alert other subscribers.
 
 Real-World Example: A factory floor has 500 machine vibration sensors, all publishing to machines/<id>/vibration at 10Hz. A central monitoring server subscribes to all topics. When a machine's vibration pattern deviates, an ML model running on the server triggers an alert — all in under 100ms from sensor to alert.`,
-        videos: ["https://www.youtube.com/watch?v=EIqdP5qY7gk"],
+        videos: ["https://www.youtube.com/watch?v=OD2pxBN-MyI&pp=ygUWTVFUVCBQcm90b2NvbCBJbiBEZXB0aA%3D%3D"],
       },
       {
         id: "thingspeak",
@@ -611,7 +601,7 @@ React Widget in ThingSpeak:
 Channels can be embedded as iframes in custom web dashboards, showing live line charts that update every 15 seconds.
 
 Real-World Example: Students build a classroom air-quality monitor with MQ-135 (CO₂), DHT22 (temp/humidity), and ESP32. Data streams to ThingSpeak every 30 seconds. The teacher opens the public channel dashboard on a projector — if CO₂ spikes above 1000ppm (stuffy room), a MATLAB analysis triggers a ThingSpeak alert email: 'Open the windows!'`,
-        videos: ["https://www.youtube.com/watch?v=2uLQre1DAUE"],
+        videos: ["https://www.youtube.com/watch?v=TOv9qDER870&pp=ygUhVGhpbmdTcGVhayBJb1QgRnJhbWV3b3JrIHBsYXlsaXN0"],
       },
     ],
   },
@@ -653,7 +643,7 @@ Devices request an IP via DHCP. The router's DNS server registers the hostname a
 Devices register with a cloud registry (AWS IoT Thing Registry). Applications query the registry to find devices by type, location, or capability.
 
 Real-World Example: When you plug a Philips Hue Bridge into your router, it uses UPnP to announce its presence. The Hue app running on your phone receives the SSDP announcement and automatically finds the Bridge — no IP address entry needed.`,
-        videos: ["https://www.youtube.com/watch?v=8X8o6F3l5R4"],
+        videos: ["https://www.youtube.com/watch?v=QqZ_Q3ZY7dc&pp=ygUdRGV2aWNlIERpc2NvdmVyeSBDYXBhYmlsaXRpZXM%3D"],
       },
       {
         id: "register-device",
