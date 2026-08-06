@@ -1,6 +1,6 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Play } from "lucide-react";
+import { ArrowLeft, ArrowRight, Play, FileText, Download, ExternalLink } from "lucide-react";
 import { getTopic } from "@/data/units";
 import { Image } from "@/components/ui/image";
 
@@ -115,6 +115,52 @@ export default function Topic() {
                 <div className="grid gap-5 md:grid-cols-2">
                   {topic.videos.map((v, i) => (
                     <YouTubeEmbed key={i} url={v} label={`${topic.title} — Resource ${i + 1}`} />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* PDF Study Materials */}
+            {topic.pdfs && topic.pdfs.length > 0 && (
+              <section className="mt-16">
+                <p className="font-mono text-xs uppercase tracking-[0.3em] text-purple-500 mb-3">Downloads</p>
+                <h2 className="font-display text-2xl font-bold text-gray-900 mb-6">Study Materials</h2>
+                
+                <div className="grid gap-4 md:grid-cols-2">
+                  {topic.pdfs.map((pdf, i) => (
+                    <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-2xl border border-gray-200 bg-white shadow-sm hover:border-purple-200 hover:shadow-md transition-all">
+                      
+                      {/* Left Side: Icon & Title */}
+                      <div className="flex items-center gap-4 mb-4 sm:mb-0">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-50 flex-shrink-0">
+                          <FileText className="h-5 w-5 text-purple-600" />
+                        </div>
+                        <div>
+                          <p className="font-display font-bold text-gray-900 leading-snug">{pdf.title}</p>
+                          <p className="text-xs text-gray-400 mt-0.5">{pdf.size || "PDF Document"}</p>
+                        </div>
+                      </div>
+
+                      {/* Right Side: Action Buttons */}
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        <a 
+                          href={pdf.url} 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="flex flex-1 sm:flex-none items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-purple-600 bg-purple-50 hover:bg-purple-100 transition-colors"
+                        >
+                          <ExternalLink className="h-4 w-4" /> View
+                        </a>
+                        <a 
+                          href={pdf.url} 
+                          download
+                          className="flex flex-1 sm:flex-none items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 transition-colors"
+                        >
+                          <Download className="h-4 w-4" /> Save
+                        </a>
+                      </div>
+
+                    </div>
                   ))}
                 </div>
               </section>

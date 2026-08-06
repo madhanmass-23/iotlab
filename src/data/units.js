@@ -189,8 +189,29 @@ Level 6 — Fully Cloud-Native + Edge + AI:
 • Example: Tesla's fleet — each car processes sensor data at the edge for instant driving decisions; petabytes of fleet data are uploaded to Tesla's cloud to train improved Autopilot models.`,
         videos: ["https://www.youtube.com/watch?v=JbUBOpXFc9E&list=PLgwJf8NK-2e6FvFUItZbGYnKiqjrlLpCb&index=17"],
       },
+      {
+        id: "study-materials",
+        title: "Study Materials",
+        excerpt: "Downloadable resources, lecture notes, and reference links to help you master this unit.",
+        content: "Access essential resources to master the physical and logical concepts of this unit.",
+        image: "/public/unit1.jpg", 
+        videos: [],
+        pdfs: [
+          {
+            title: "Embedded Systems & IoT Architecture Notes",
+            size: "2.4 MB",
+            url: "/notes/IoTunit-1.pdf" 
+          },
+          {
+            title: "Complete IoT Notes",
+            size: "1.1 MB",
+            url: "/notes/IoT-notes.pdf" 
+          }
+        ]
+      }
     ],
   },
+  
   {
     id: 2,
     code: "UNIT_02",
@@ -409,6 +430,26 @@ Wi-Fi Considerations for IoT:
 Real-World Example: An ESP32 in a home energy monitor connects to the home Wi-Fi, reads current clamps via ADC every 10 seconds, publishes power consumption to an MQTT broker on a Raspberry Pi, which logs to InfluxDB and displays live watts on a Grafana dashboard visible on any browser in the house.`,
         videos: ["https://www.youtube.com/watch?v=-fjPII3dkkc"],
       },
+      {
+        id: "study-materials",
+        title: "Study Materials",
+        excerpt: "Downloadable resources, lecture notes, and reference links to help you master this unit.",
+        content: "Access essential resources to master the physical and logical concepts of this unit.",
+        image: "/public/unit1.jpg", 
+        videos: [],
+        pdfs: [
+          {
+            title: "Embedded Systems & IoT Architecture Notes",
+            size: "2.4 MB",
+            url: "/notes/IoTunit-1.pdf" 
+          },
+          {
+            title: "Complete IoT Notes",
+            size: "1.1 MB",
+            url: "/notes/IoT-notes.pdf" 
+          }
+        ]
+      }
     ],
   },
   {
@@ -603,6 +644,26 @@ Channels can be embedded as iframes in custom web dashboards, showing live line 
 Real-World Example: Students build a classroom air-quality monitor with MQ-135 (CO₂), DHT22 (temp/humidity), and ESP32. Data streams to ThingSpeak every 30 seconds. The teacher opens the public channel dashboard on a projector — if CO₂ spikes above 1000ppm (stuffy room), a MATLAB analysis triggers a ThingSpeak alert email: 'Open the windows!'`,
         videos: ["https://www.youtube.com/watch?v=TOv9qDER870&pp=ygUhVGhpbmdTcGVhayBJb1QgRnJhbWV3b3JrIHBsYXlsaXN0"],
       },
+      {
+        id: "study-materials",
+        title: "Study Materials",
+        excerpt: "Downloadable resources, lecture notes, and reference links to help you master this unit.",
+        content: "Access essential resources to master the physical and logical concepts of this unit.",
+        image: "/public/unit1.jpg", 
+        videos: [],
+        pdfs: [
+          {
+            title: "Embedded Systems & IoT Architecture Notes",
+            size: "2.4 MB",
+            url: "/notes/IoTunit-1.pdf" 
+          },
+          {
+            title: "Complete IoT Notes",
+            size: "1.1 MB",
+            url: "/notes/IoT-notes.pdf" 
+          }
+        ]
+      }
     ],
   },
   {

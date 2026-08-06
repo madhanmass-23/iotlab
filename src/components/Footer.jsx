@@ -64,7 +64,14 @@ export default function Footer() {
             
             {/* Updated Credits */}
             <p className="mt-4 text-sm text-gray-500">
-              Designed & Developed by <span className="text-white font-medium">Team Lafluence</span><br />
+              Designed & Developed by <span className="text-white font-medium">Team <a 
+    href="https://lafluence.in/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-purple-400 hover:text-purple-300 hover:underline transition-colors"
+  >
+    Lafluence
+  </a></span><br />
              Under{" "}
   <a 
     href="https://kec.ac.in/departments/electronics-communication-engineering/" 
@@ -77,14 +84,25 @@ export default function Footer() {
 </p>
             
             {/* Social Links - Keep these for professional presence */}
-            <div className="mt-6 flex gap-3">
-              {[Github, Linkedin, Mail].map((Icon, i) => (
-                <a key={i} href="#" className="h-9 w-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500 transition-colors" aria-label="Social">
+           <div className="mt-6 flex gap-3">
+              {[
+                { Icon: Github, link: "https://github.com/madhanmass-23" },
+                { Icon: Linkedin, link: "https://www.linkedin.com/in/n-madhan-kumar/" },
+                { Icon: Mail, link: "mailto:madhankumar2005.30@gmail.com" }
+              ].map(({ Icon, link }, i) => (
+                <a 
+                  key={i} 
+                  href={link} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="h-9 w-9 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500 transition-colors" 
+                  aria-label="Social"
+                >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
-          </div>
+          </div> {/* <--- THIS IS THE MISSING CLOSING TAG THAT FIXES THE ERROR */}
 
           {/* Navigation Columns */}
           {footerNav.map((col) => (
